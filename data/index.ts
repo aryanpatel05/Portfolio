@@ -135,6 +135,15 @@ export const projects = [
     link: "https://youtu.be/6rCzOyXlbr0",
     sourceCode: "https://github.com/aryanpatel05/PixelApp",
   },
+  {
+    id: 8,
+    title: "Flight Tracker App",
+    des: "A geolocation-based Flight tracker app that shows all aircrafts around the world with there info",
+    img: "/flighttrac.jpg",
+    iconLists: ["/dartf.svg","/ruby.svg","/c++ .svg"],
+    link: "https://www.youtube.com/watch?v=VaJoHcX9r5M",
+    sourceCode: "https://github.com/aryanpatel05/flightTracker",
+  },
   
 ] as const;
 
