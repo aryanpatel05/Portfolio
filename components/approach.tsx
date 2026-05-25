@@ -17,7 +17,7 @@ export const Approach = () => {
         <Card
           title="Planning & Strategy"
           icon={<MagicButton title="Phase 1" asChild />}
-          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          description="We'll collaborate on product goals, target users, and core features—from UI flows to APIs, data models, and deployment needs."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -44,7 +44,7 @@ export const Approach = () => {
         <Card
           title="Development & Launch"
           icon={<MagicButton title="Phase 3" asChild />}
-          description="This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up."
+          description="This is where the magic happens! I'll build your full-stack product—frontend, backend, database, and integrations—ready to launch."
         >
           <CanvasRevealEffect
             animationSpeed={3}

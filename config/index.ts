@@ -8,7 +8,7 @@ export const links = {
 
 export const siteConfig: Metadata = {
   title: `${links.ownerName}'s Portfolio`,
-  description: "Modern & Minimalist Next.js Portfolio.",
+  description: `${links.ownerName} — Full-Stack Engineer portfolio. Web apps, mobile apps, APIs, and databases.`,
   keywords: [
     "reactjs",
     "nextjs",

@@ -28,16 +28,26 @@ export const Hero = () => {
       <div className="relative z-10 my-20 flex justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
           <h2 className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
-            Dynamic Web Magic 
+            Full-Stack Engineering
           </h2>
 
-          <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming Concepts into Seamless User Experiences"
-          />
+          <div className="my-4 flex w-full max-w-[100vw] flex-col items-center overflow-hidden px-2 text-center text-[clamp(1.15rem,3.6vw,3.5rem)]">
+            <TextGenerateEffect
+              compact
+              nowrap
+              highlightFrom={99}
+              words="Building End-to-End Products"
+            />
+            <TextGenerateEffect
+              compact
+              nowrap
+              highlightIndices={[1, 3]}
+              words="Across Web and Apps"
+            />
+          </div>
 
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-            Hi, I&apos;m {links.ownerName}, a Web and App developer based in India.
+            Hi, I&apos;m {links.ownerName}, a Full-Stack Engineer based in India.
           </p>
 
           <Link href="#about" className="md:mt-10">

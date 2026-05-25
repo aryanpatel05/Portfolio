@@ -143,6 +143,10 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        "tech-marquee": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -156,6 +160,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        "tech-marquee": "tech-marquee 45s linear infinite",
       },
     },
   },

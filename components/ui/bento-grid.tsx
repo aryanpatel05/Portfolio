@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
 
 import { links } from "@/config";
-import { techStack } from "@/data";
 import animationData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { MagicButton } from "./magic-button";
+import { TechStackCarousel } from "./tech-stack-carousel";
 
 import { GridGlobe } from "../grid-globe";
 
@@ -73,7 +73,8 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento relative row-span-1 flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] shadow-input transition duration-200 hover:shadow-xl dark:shadow-none",
+        "group/bento relative row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border border-white/[0.1] shadow-input transition duration-200 hover:shadow-xl dark:shadow-none",
+        "overflow-hidden",
         className
       )}
       style={{
@@ -130,52 +131,22 @@ export const BentoGridItem = ({
 
           {id === 2 && <GridGlobe />}
 
-          {id === 3 && (
-            <div className="absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-5">
-              <div className="flex flex-col gap-3 lg:gap-8">
-                {techStack.stack1.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-lg bg-[#10132e] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-
-                <span className="rounded-lg bg-[#10132e] px-3 py-4 text-center" />
-              </div>
-
-              <div className="flex flex-col gap-3 lg:gap-8">
-                <span className="rounded-lg bg-[#10132e] px-3 py-4 text-center" />
-                {techStack.stack2.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-lg bg-[#10132e] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
+          {id === 3 && <TechStackCarousel />}
 
           {id === 6 && (
             <div className="group relative mt-5">
-              <button
-                tabIndex={-1}
-                className="pointer-events-none absolute -bottom-5 right-0 cursor-default"
-              >
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
-                  }}
-                />
-              </button>
+              {copied && (
+                <button
+                  tabIndex={-1}
+                  className="pointer-events-none absolute -bottom-5 right-0 cursor-default"
+                >
+                  <Lottie
+                    animationData={animationData}
+                    loop={false}
+                    className="h-24 w-24 md:h-32 md:w-32"
+                  />
+                </button>
+              )}
 
               <MagicButton
                 title={copied ? "Email copied!" : "Copy my email"}
