@@ -42,22 +42,24 @@ export const RecentProjects = () => {
         </h1>
 
         <div className="grid w-full grid-cols-1 gap-x-8 gap-y-[15px] sm:grid-cols-2">
-        {projects.map(({ id, des, iconLists, img, link, title, ...rest }) => {
-          const nda = "nda" in rest && rest.nda === true;
-          const clientBadge =
-            "clientBadge" in rest ? rest.clientBadge : undefined;
+          {projects.map(({ id, des, iconLists, img, link, title, ...rest }) => {
+            const nda = "nda" in rest && rest.nda === true;
+            const clientBadge =
+              "clientBadge" in rest ? rest.clientBadge : undefined;
 
             return (
               <div
                 key={id}
-                className="flex h-[32rem] w-[90vw] items-center justify-center sm:h-[41rem] sm:w-[570px] lg:min-h-[32.5rem]"
+                className="relative mx-auto flex h-[32rem] w-full max-w-[570px] items-center justify-center sm:h-[41rem] lg:min-h-[32.5rem]"
               >
                 <PinContainer
                   title="Visit"
                   href={nda ? undefined : link}
                   onVisitClick={nda ? () => openNdaModal(title) : undefined}
+                  className="w-full"
+                  containerClassName="relative h-full w-full"
                 >
-                  <div className="relative mb-10 flex h-[30vh] w-[80vw] items-center justify-center overflow-hidden sm:h-[40vh] sm:w-[570px]">
+                  <div className="relative mb-10 flex h-[30vh] w-full items-center justify-center overflow-hidden sm:h-[40vh]">
                     <div className="relative h-full w-full overflow-hidden bg-[#13162d] lg:rounded-3xl">
                       <Image
                         height={330}

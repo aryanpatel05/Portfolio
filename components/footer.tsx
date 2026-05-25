@@ -47,7 +47,7 @@ export const Footer = () => {
 
       <div className="relative z-[999] mt-16 flex flex-col items-center justify-between md:flex-row">
         <p className="text-sm font-light md:text-base md:font-normal">
-        
+
         </p>
 
         <div className="flex items-center gap-6 md:gap-3">

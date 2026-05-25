@@ -18,13 +18,13 @@ export const Experience = () => {
             className="flex-1 border-neutral-200 text-white dark:border-slate-800"
             duration={Math.floor(Math.random() * 10000 + 10000)}
           >
-            <div className="flex flex-col gap-2 p-3 py-6 md:p-5 lg:flex-row lg:items-center lg:p-10">
+            <div className="flex w-full flex-col items-start gap-3 p-3 py-6 md:p-5 lg:flex-row lg:items-center lg:gap-4 lg:p-10">
               <Image
                 width={95}
                 height={87}
                 src={experience.thumbnail}
                 alt={experience.title}
-                className="w-16 md:w-20 lg:w-32"
+                className="h-16 w-16 shrink-0 object-contain object-left md:h-20 md:w-20 lg:h-32 lg:w-32"
               />
 
               <div className="lg:ms-5">

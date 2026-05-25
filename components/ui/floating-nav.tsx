@@ -25,7 +25,7 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
 
   useMotionValueEvent(scrollY, "change", (current) => {
     if (typeof current === "number") {
-       if (current < 50) {
+      if (current < 50) {
         setVisible(true);
       } else {
         if (current > lastScrollY) {

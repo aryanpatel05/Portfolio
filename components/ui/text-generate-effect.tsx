@@ -55,15 +55,15 @@ export const TextGenerateEffect = ({
               : idx >= highlightFrom;
 
             return (
-            <motion.span
-              key={`${word}-${idx}`}
-              className={cn(
-                "opacity-0",
-                isPurple ? "text-purple" : "text-white"
-              )}
-            >
-              {word}{" "}
-            </motion.span>
+              <motion.span
+                key={`${word}-${idx}`}
+                className={cn(
+                  "opacity-0",
+                  isPurple ? "text-purple" : "text-white"
+                )}
+              >
+                {word}{" "}
+              </motion.span>
             );
           })}
         </motion.div>
